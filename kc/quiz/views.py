@@ -60,3 +60,10 @@ class login(generics.GenericAPIView):
             )
         else:
             return Response("Wrong Credentials! Please try again.", status=status.HTTP_403_FORBIDDEN)
+        
+        
+class check(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, format=None):
+        return Response("Registered/Logged in successfully. User is authenticated.", status=status.HTTP_200_OK)
