@@ -15,6 +15,4 @@ db.sqlite3
 ##
 db.json
 ##
-static/*
-##
 dump.json
